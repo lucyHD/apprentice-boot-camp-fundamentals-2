@@ -6,6 +6,18 @@ describe('Bowling tests', () => {
     const result = bowl(rolls)
     expect(result).toEqual(0)
   }); 
+  test('GIVEN an array of scores that are all 1, WHEN the array of scores is passed to the bowl function, THEN the bowl function should return 20 ', () => {
+    const rolls = [1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1 ,1,1]; 
+    const result = bowl(rolls)
+    expect(result).toEqual(20)
+  }); 
+  // test('GIVEN an array of scores where one frame equals 10, WHEN the array of scores is passed to the bowl function, THEN the bowl function should return 20 ', () => {
+  //   const rolls = [5,5, 1,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0 ,0,0]; 
+  //   const result = bowl(rolls)
+  //   expect(result).toEqual(12)
+  //}); 
+  
 });
+
 
 
