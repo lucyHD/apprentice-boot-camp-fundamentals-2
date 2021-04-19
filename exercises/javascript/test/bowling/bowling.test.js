@@ -16,6 +16,11 @@ describe('Bowling tests', () => {
     const result = bowl(rolls)
     expect(result).toEqual(12)
   }); 
+  test('GIVEN an array of scores where one roll equals 10, WHEN the array of scores is passed to the bowl function, THEN the bowl function should return 20 ', () => {
+    const rolls = [10, 1,1, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0 ,0,0]; 
+    const result = bowl(rolls)
+    expect(result).toEqual(14)
+  }); 
   
 });
 
