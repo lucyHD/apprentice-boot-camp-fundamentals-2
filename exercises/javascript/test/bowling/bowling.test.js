@@ -21,6 +21,11 @@ describe('Bowling tests', () => {
     const result = bowl(rolls)
     expect(result).toEqual(14)
   }); 
+  test('GIVEN an array of scores where there is strike and a spare, WHEN the array of scores is passed to the bowl function, THEN the bowl function should return 20 ', () => {
+    const rolls = [10, 1,1, 2,3, 5,5, 1,0, 0,0, 0,0, 0,0, 0,0 ,0,0]; 
+    const result = bowl(rolls)
+    expect(result).toEqual(31)
+  }); 
   
 });
 
