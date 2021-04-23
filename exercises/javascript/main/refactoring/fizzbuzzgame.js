@@ -1,7 +1,7 @@
 
 let currentNumBetween0And100 = 0; 
-let numberType = 0;
-let num5 = 5;
+let numberBetwen0And3 = 0; //loops over 0-3 
+let numberBetween0And5 = 5; //loops over 0-5 
 
 
 
@@ -18,33 +18,33 @@ function makeTheString() {
   
 }
 
-function fizz() {
-  numberType = 0;
+function fizz() { //if currentNum is a multiple of 3
+  numberBetwen0And3 = 0; 
   return 'Fizz';
   
 }
 
-function buzz() {
-  num5 = 5;
+function buzz() { //if currentNum is a multiple of 5 
+  numberBetween0And5 = 5; 
   return 'Buzz';
 }
 
 
 
-function fizzBuzzer(currentNumBetween0And100) {
+function fizzBuzzer(currentNumBetween0And100) { //2 
 
-  numberType++; //0 becomes 1 
-  num5--; //5 becomes 4 
+  numberBetwen0And3++; 
+  numberBetween0And5--; 
 
-  const isAMultipleOfThree = numberType == 3; // value of isAMultiplOfThree is aboolean - is number type == 3 - true or false?
+  const isAMultipleOfThree = numberBetwen0And3 == 3;
+  const isAMultipleOfFive = numberBetween0And5 == 0; 
+
+
+  let fizzBuzzOrNum = isAMultipleOfThree || isAMultipleOfFive ? "" : currentNumBetween0And100 + 1;
   
-
-  const isAMultipleOfFive = num5 == 0; // value of isAMultiplOfFive is aboolean - is num5 == 0 - true or false?
-  let s = isAMultipleOfThree || isAMultipleOfFive ? "" : currentNumBetween0And100 + 1;
-  
-  if (isAMultipleOfThree) s += fizz(); 
-  if (isAMultipleOfFive) s += buzz();
-  return s; // will return fizz, buzz, fizzbuzz or a number like 1 
+  if (isAMultipleOfThree) fizzBuzzOrNum += fizz(); 
+  if (isAMultipleOfFive) fizzBuzzOrNum += buzz();
+  return fizzBuzzOrNum; // will return fizz, buzz, fizzbuzz or a number like 1,2,7,14.....
 
 }
 
